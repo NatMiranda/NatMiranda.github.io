@@ -1,0 +1,273 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f2f0ec; /* Fondo general de la página */
+  color: #333;
+}
+
+/* NAVBAR (Ya definido) */
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Estilos de los enlaces del menú (ya incluyen redondeo y transición) */
+nav a {
+  text-decoration: none;
+  color: #333;
+  background-color: transparent;
+  font-weight: 500;
+  display: block;
+  border-radius: 5px; /* Redondeo de las esquinas al pasar el cursor */
+  padding: 10px 15px;
+  transition: all 0.5s ease;
+}
+
+/* Efecto hover oscuro para las opciones del menú (ya definido) */
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Tono más oscuro */
+  color: #000;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  margin-right: 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* El color debe ser #333 para ser visible sobre fondo #fff del header */
+  color: #333; 
+  text-decoration: none;
+}
+
+/* BUSCADOR (Ya definido) */
+.search-container {
+  text-align: center;
+  padding: 20px;
+  margin: 30px 0 0 0;
+}
+.search-container input {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.results-count {
+  text-align: right;
+  margin: 10px 40px 0;
+  color: #fff;
+  background: #c00;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* LAYOUT (Ya definido) */
+.main-content {
+  margin: 50px 250px;
+  display: flex; /* Necesario para que el aside y las cards estén lado a lado */
+  gap: 40px;
+}
+
+/* ---------------------------------------------------- */
+/* SIDEBAR (Filtros Fijos/Sticky) */
+/* ---------------------------------------------------- */
+aside {
+  flex: 1;
+  max-width: 200px;
+  font-size: 14px;
+  padding-bottom: 50px; /* Importante: Da espacio al final para que el scroll funcione */
+  
+  /* PROPIEDADES CLAVE PARA EL EFECTO STICKY */
+  position: sticky;
+  top: 20px; /* Distancia a la que se pegará del borde superior de la ventana */
+  height: fit-content; /* Esencial para que el elemento sticky se limite a su contenido */
+  
+  /* Estilos para que se vea bien */
+  background: #fff; /* Le damos fondo blanco para destacarlo del body */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+aside h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #c00;
+}
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+aside ul li {
+  margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* CARDS (Ya definido) */
+/* ---------------------------------------------------- */
+.cards {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Efecto de agrandamiento al pasar el cursor (ya definido) */
+.card {
+  border: 2px solid #c00;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Zoom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.card .image-placeholder {
+  background: #eee;
+  height: 250px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.card h4 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #c00;
+  font-weight: bold;
+}
+.card .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.card button {
+  border: 1px solid #333;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.card button:hover {
+  background: red;
+  color: white;
+}
+
+
+/* FOOTER (Ya definido) */
+footer {
+  background: #eee;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.socials {
+  display: flex;
+  gap: 15px;
+}
+.socials a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+/* CSS DE COSO (Ya definido) */
+
+
+/* Banner */
+.banner {
+  position: relative;
+  background: url("../images/upscalemedia-transformed.jpeg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 200px 10%;
+}
+.banner h2 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 400;
+}
+.banner h1 {
+  font-size: 56px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.banner p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sección Nosotros */
+.nosotros {
+  padding: 60px 40px;
+  background: #fff;
+}
+.nosotros h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.nosotros-cards {
+  display: flex;
+  gap: 20px;
+}
+.nosotros-card {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  color: rgb(25, 25, 25);
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.nosotros-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+.nosotros-card p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Sección Mapa */
+.mapa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background: #222;
+  color: white;
+}
+.mapa iframe {
+  width: 400px;
+  height: 300px;
+  border: none;
+}
