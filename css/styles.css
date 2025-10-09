@@ -7,7 +7,7 @@ body {
 /* NAVBAR (Ya definido) */
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 15px 30px;
   background: #fff;
@@ -29,14 +29,14 @@ nav a {
   display: block;
   border-radius: 5px; /* Redondeo de las esquinas al pasar el cursor */
   padding: 10px 15px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Efecto hover oscuro para las opciones del menú (ya definido) */
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.1); /* Tono más oscuro */
   color: #000;
-  transition: all 0.5s ease;
+  transform: scale(1.1);
 }
 
 .logo {
