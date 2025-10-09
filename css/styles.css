@@ -9,7 +9,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 30px;
   background: #fff;
   border-bottom: 1px solid #ddd;
 }
@@ -46,6 +45,11 @@ nav a:hover {
   /* El color debe ser #333 para ser visible sobre fondo #fff del header */
   color: #333; 
   text-decoration: none;
+}
+
+.logo img {
+  width: 68px; /* Por ejemplo, define un ancho fijo */
+  height: auto; /* Mantiene la proporción para que no se distorsione */
 }
 
 /* BUSCADOR (Ya definido) */
